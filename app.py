@@ -45,6 +45,7 @@ with tab1:
     if st.button("추가"):  # FIX: 콜론(:) 누락
         students.append({"이름": name, "국어": kor, "영어": eng, "수학": mat})
         st.success(f"{name} 학생을 추가했습니다.")
+        st.rerun()  # FIX: 추가 직후 재실행 → 상단 지표(탭 위)도 즉시 갱신
 
 # --- Tab 2 : 학생별 성적표 ---
 with tab2:
